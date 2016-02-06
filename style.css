@@ -3,15 +3,21 @@ html {
 }
 
 .header {
-
 	font-family: Georgia;
 	color: #B4D8E7;
 	font-weight:bold;
 	font-size:90pt;
 	text-align: center;
-	height: 15%;
+	height: 20%;
 	background-image: url(images/bluebkg.jpg);
 	position:relative;
+}
+.header img {
+	max-height: 100px;
+	height:100%;
+	max-width:300px;
+	width:30%;
+	text-align: center;
 }
 
 body {
@@ -21,18 +27,52 @@ body {
     color: white;
     height: 100%
 }
-
-
-
-#map{
-	
-	position: relative;
-	height: 83%
+h1 {
+	color:white;
+	font-size: 20px;
 }
-
+#map{
+	position: relative;
+	height: 83%;
+	z-index:-50;
+}
 .bottom {
 	text-align: center;
 	background-image: url(images/greenbkg.jpg);
 	height: 2% ;
 	position: relative;
-	
+}
+#in1 {
+	z-index:50;
+	position:absolute;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size:30pt;
+    margin:20px;
+    padding:10px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    color:black;
+    border-radius:10px;
+}
+#in1 p {
+	position:relative;
+	top:50px;
+}
+#in1 input[type="text"] {
+	height:50px;
+	width:100%;
+	max-width: 500px;
+    padding: 12px 10px;
+    margin: 8px 0;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+}
+ 
