@@ -17,20 +17,24 @@
         <img id ="logo" src ="images/logo1.png">
     </div>
   
-        <div id='map'></div>
+        <div id='map'> </div>
         <div id="in1">
-          <input type="text" name="in1" placeholder="WHERE YOU AT" maxlength = "3"
-          onkeydown = "if (event.keyCode == 13) 
-                            map.easeTo({
-                            center: [-84.39, 33.755],
-                            zoom: 9,
-                            duration: 3000
-                        });">
+
+            <input type="text" name="in1" id="in1_txt" placeholder="WHERE YOU AT" maxlength = "3" onkeydown="keydownFunction() ">
+            <br>
+            </div>
+        <div id="in2">
+            WHEN YA LEAVIN
+            <br>
+            <input type="date" name="in2" id="in2_day">
+            <input type="submit" name = "submit" onclick ="keydownFunction()">
+            
         </div>
 
     <script type="text/javascript" src="script.js"></script>
 
 </body>
+
     <div class="bottom">
         <br>
         <a href="contact.php">Contact us</a>

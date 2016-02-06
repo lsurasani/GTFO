@@ -1,5 +1,6 @@
 html {
 	height:100%;
+
 }
 
 .header {
@@ -9,7 +10,7 @@ html {
 	font-size:90pt;
 	text-align: center;
 	height: 20%;
-	background-image: url(images/bluebkg.jpg);
+	background: white;
 	position:relative;
 }
 .header img {
@@ -18,6 +19,7 @@ html {
 	max-width:300px;
 	width:30%;
 	text-align: center;
+	top:20px;
 }
 
 body {
@@ -38,9 +40,10 @@ h1 {
 }
 .bottom {
 	text-align: center;
-	background-image: url(images/greenbkg.jpg);
-	height: 2% ;
+	background:white;
+	height: 10%;
 	position: relative;
+	color: black;
 }
 #in1 {
 	z-index:50;
@@ -55,14 +58,15 @@ h1 {
     padding:10px;
     background-color: #ffffff;
    /* border: 1px solid black;*/
-    opacity: 0.6;
+    opacity: 0.7;
     filter: alpha(opacity=60);
     color:black;
     border-radius:10px;
-}
-#in1 p {
-	position:relative;
-	top:50px;
+    visibility: visible;
+    font-size: 20px;
+    padding: 12px 10px;
+    margin: 8px 0;
+
 }
 #in1 input[type="text"] {
 	height:50px;
@@ -74,5 +78,28 @@ h1 {
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid red;
+    outline:none;
+}
+#in2 {
+		z-index:50;
+	position:absolute;
+	top: 65%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size:30pt;
+    margin:20px;
+    padding:10px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+    color:black;
+    border-radius:10px;
+    visibility: visible;
+    font-size: 20px;
+    padding: 12px 10px;
+    margin: 8px 0;
 }
  
