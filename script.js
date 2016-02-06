@@ -9,3 +9,19 @@
         interactive:false
         });
 
+
+    function keydownFunction() {
+        if (event.keyCode == 13){
+            if (in1.length != 3) {
+                alert(in1.length);
+            }
+            else {
+                            map.easeTo({
+                            center: [-84.39, 33.755],
+                            zoom: 9,
+                            duration: 3000
+                        });}
+    }
+}
+
+
