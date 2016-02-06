@@ -1,0 +1,31 @@
+body {
+	width:100%;
+    font-family: "Trebuchet MS";
+    color: white;
+    height: 100%
+}
+.header {
+	font-family: Georgia;
+	color: #B4D8E7;
+	font-weight:bold;
+	font-size:30pt;
+	text-align: center;
+	max-height: 100px;
+	height: 15%;
+	background-image: url(images/bluebkg.jpg);
+}
+h1 {
+	margin: 0px;
+}
+html {
+	height:100%;
+}
+.mapbox {
+	min-height: 500px;
+	background-color: black;
+}
+.bottom {
+	text-align: center;
+	background-image: url(images/greenbkg.jpg);
+	height:75px;
+}
