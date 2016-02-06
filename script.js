@@ -4,6 +4,8 @@
         var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-        center: [-74.50, 40], // starting position
-        zoom: 0// starting zoom
+        center: [-84.39, 33.755], // starting position
+        zoom: 0,// starting zoom
+        interactive:false
         });
+
