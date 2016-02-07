@@ -11,10 +11,13 @@
     </div>
 </body>
 <script type="text/javascript">
+    var date = "2016-02-09";
+    var deptAirport = "JFK";
+    var arrAirport = "WAS"
     console.log("Heyoo");
-    var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=LAX&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
+    var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
     $.ajax({
-        "url": "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=LAX&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU",
+        "url": "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU",
         // "headers": {
         //     'Authorization': 'Basic ' + btoa("expedia-apikey key=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU"),
         //     "Content-Type": "application/json"
