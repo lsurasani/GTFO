@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Foo</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+    <h1>Heyyyooo</h1>
+    <button type="button" id="btn">Nigga</button>
+    <div class="list">
+
+    </div>
+</body>
+<script type="text/javascript">
+    console.log("Heyoo");
+    var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=LAX&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
+    $.ajax({
+        "url": "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=LAX&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU",
+        // "headers": {
+        //     'Authorization': 'Basic ' + btoa("expedia-apikey key=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU"),
+        //     "Content-Type": "application/json"
+        //     // "Authorization": "expedia-apikey key=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU"
+        // },
+        "Access-Control-Allow-Headers": "origin, x-requested-with, accept, Authorization",
+        "Access-Control-Allow-Origin": "*",
+        "crossDomain": true,
+        success: function(res) {
+            console.log(res);
+            // try {
+            //     JSON.parse(res);
+            // } catch(e) {
+            //     console.log("Error: ",e);
+            // }
+            // $(".list").html(JSON.parse(res));
+        },
+        error: function(e) {
+            console.log(e);
+        }
+    });
+    // $.get(url,function(res) {
+    //     console.log(res);
+    //     $(".list").append("<p>"+JSON.stringify(res)+"</p>");
+    // });
+</script>
+</html>
