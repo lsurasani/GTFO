@@ -4,7 +4,7 @@
         var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-        // center: [-84.39, 33.755], // starting position
+        center: [-84.39, 33.755], // starting position
         zoom: 0,// starting zoom
         interactive:false
         });
@@ -58,11 +58,12 @@
                             map.easeTo({
                             center: [x, y],
                             zoom: 9,
-                            duration: 3000
+                            duration: 7000
                         });
                             var a = document.getElementById("in1_txt")
                             var b = document.getElementById("in1")
                             document.getElementById("clicker").value = "New search"
+                            document.getElementById("in1_txt").value = ""
                             // setTimeout(a.style.display="none",5000);
                             // setTimeout(b.style.display="none",5000);
                             part2();
