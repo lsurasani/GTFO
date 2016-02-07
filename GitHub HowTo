@@ -1,6 +1,15 @@
-First Time commiting/etc.
+First Time committing/etc.
 
 1. Create a file called "GTFO" on your computer
 2. Open command prompt/terminal and go to the GTFO folder
 3. Type in: “git clone https://github.com/lsurasani/GTFO.git”
-4. 
+4. You should be ready to commit! :) Move on to the next part.
+
+To add files to repository (type the following)
+1. git add "<insert file name>"
+2. git commit -m "<insert comment about what you updated>"
+3. git pull origin master
+4. git push origin master
+
+To pull files from the repository (type the following)
+1. git pull origin master

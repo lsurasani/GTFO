@@ -1,0 +1,135 @@
+html {
+	height:100%;
+
+}
+
+.header {
+	font-family: Georgia;
+	color: #B4D8E7;
+	font-weight:bold;
+	font-size:90pt;
+	text-align: left;
+	height: 12%;
+	position:relative;
+	background-image: url("images/bluebkg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header img {
+	max-height: 100px;
+	height:100%;
+	max-width:300px;
+	width:30%;
+	text-align: center;
+	top:20px;
+}
+
+body {
+	width:100%;
+
+    font-family: "Trebuchet MS";
+    color: black;
+    height: 100%
+}
+h1 {
+	color:white;
+	font-size: 20px;
+}
+#map{
+	position: relative;
+	height: 83%;
+	z-index:-50;
+}
+.bottom {
+	text-align: center;
+	background:white;
+	height: 10%;
+	position: relative;
+	color: black;
+}
+#in1 {
+	z-index:50;
+	position:absolute;
+	top: 50%;
+    left: 40%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size:30pt;
+    margin:10px;
+    padding:10px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+    color:black;
+    border-radius:10px;
+    visibility: visible;
+    font-size: 20px;
+    padding: 4px 10px;
+    margin: 8px 0;
+
+}
+#in1 input[type="text"] {
+	height:50px;
+	width:100%;
+	max-width: 500px;
+    padding: 12px 10px;
+    margin: 8px 0;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    outline:none;
+}
+#in2 {
+	position:absolute;
+	top: 50%;
+    left: 60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size:30pt;
+    margin:20px;
+    padding:10px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+    color:black;
+    border-radius:10px;
+    visibility: visible;
+    font-size: 20px;
+    padding: 12px 10px;
+    margin: 8px 0;
+    color:grey;
+}
+ #sub1 {
+	position:absolute;
+	top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size:30pt;
+    margin:20px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+    color:black;
+    visibility: visible;
+    font-size: 20px;
+  }
+  table {
+  	border-collapse: collapse;
+  	width:80%;
+  	 center;
+  	/*text-align: center;*/
+  }
+  th, td {
+  	padding: 2px;
+  	border-bottom: 1px solid #ddd;
+  	text-align: left;
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
