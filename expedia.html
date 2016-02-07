@@ -6,39 +6,48 @@
 <body>
     <h1>Heyyyooo</h1>
     <button type="button" id="btn">Word</button>
-    <div class="list">
+    <ul class="list">
 
-    </div>
+    </ul>
 </body>
 <script type="text/javascript">
+    var date = "2016-02-09"
+    var deptAirport = "ATL"
+    var arrivAirport = "WAS"
     console.log("Heyoo");
-    var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=LAX&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
-    $.ajax({
-        "url": "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=LAX&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU",
-        // "headers": {
-        //     'Authorization': 'Basic ' + btoa("expedia-apikey key=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU"),
-        //     "Content-Type": "application/json"
-        //     // "Authorization": "expedia-apikey key=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU"
-        // },
-        "Access-Control-Allow-Headers": "origin, x-requested-with, accept, Authorization",
-        "Access-Control-Allow-Origin": "*",
-        "crossDomain": true,
-        success: function(res) {
-            console.log(res);
-            // try {
-            //     JSON.parse(res);
-            // } catch(e) {
-            //     console.log("Error: ",e);
-            // }
-            // $(".list").html(JSON.parse(res));
-        },
-        error: function(e) {
-            console.log(e);
-        }
-    });
-    // $.get(url,function(res) {
-    //     console.log(res);
-    //     $(".list").append("<p>"+JSON.stringify(res)+"</p>");
-    // });
+    var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=GRB&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
+ 
+     $.get(url,function(res) {
+         var fares = [];
+         var flight = [];
+         var airCode = [];
+         var airLocation = [];
+         var depTime = [];
+         var distance = [];
+
+         console.log(res);
+         for (i = 0; i < res.offers.length; i++) {
+            //$(".list").append("<li>"+res.offers[i].totalFare+"</li>");
+            fares.push(res.offers[i].totalFare);
+           flight.push(res.legs[i].segments[0].airlineCode + 
+                        res.legs[i].segments[0].flightNumber);
+
+           airCode.push(res.legs[i].segments[0].arrivalAirportCode);
+           airLocation.push(res.legs[i].segments[0].arrivalAirportLocation);
+           depTime.push(res.legs[i].segments[0].departureTime);
+           distance.push(res.legs[i].segments[0].distance);
+
+
+
+
+
+         }
+         console.log(fares);
+         console.log(flight);
+         console.log(airCode);
+         console.log(airLocation);
+         console.log(depTime);
+         console.log(distance);
+     });
 </script>
 </html>
