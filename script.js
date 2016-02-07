@@ -15,20 +15,43 @@
     	var laxc = [-118.4081, 33.9425];
         var in1 = document.getElementById("in1_txt").value;
         var in2 = document.getElementById("in2_day").value;
-        in1 = in1.toString();
-        in2 = in2.toString();
-        alert(in2)
+        var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
 
-        if (event.keyCode == 13){
-            if (in1.length != 3) {
+		if(dd<10) {
+		    dd='0'+dd
+		} 
+
+		if(mm<10) {
+		    mm='0'+mm
+		} 
+
+		today = yyyy+'-'+mm+'-'+dd;
+        
+        in1 = in1.toString().toUpperCase();
+        in2 = in2.toString();
+
+        var day1 = new Date(today);
+        var day2 = new Date(in2);
+
+         	if (in1.length != 3) {
                 alert("Please enter a valid 3 letter symbol FUCKER BOY");
+                return;
+            } else if (day1 > day2) {
+            	alert("Cannot time travel to the past!!")
+            	return;
+            } else if (in2 == "") {
+            	alert("Please enter a date!")
+            	return;
             }
-            else {
-            	if (in1 == "atl") {
+            	if (in1 == "ATL") {
+
             		x = atlc[0];
             		y = atlc[1];
             	}
-            	else if (in1 == "lax") {
+            	else if (in1 == "LAX") {
             		x = laxc[0];
             		y = laxc[1];
             	}
@@ -39,12 +62,13 @@
                         });
                             var a = document.getElementById("in1_txt")
                             var b = document.getElementById("in1")
-
-                            // setTimeout(a.style.display="none",5000);	
+                            document.getElementById("clicker").value = "New search"
+                            // setTimeout(a.style.display="none",5000);
                             // setTimeout(b.style.display="none",5000);
+                            part2();
 
-            }
-    	}
+            
+    	
 	}
 
 

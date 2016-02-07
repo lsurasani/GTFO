@@ -8,6 +8,7 @@
     <link href="style.css" type="text/css" rel="StyleSheet">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
     
 </head>
@@ -20,18 +21,58 @@
         <div id='map'> </div>
         <div id="in1">
 
-            <input type="text" name="in1" id="in1_txt" placeholder="WHERE YOU AT" maxlength = "3" onkeydown="keydownFunction() ">
+            <input type="text" name="in1" id="in1_txt" placeholder="WHERE YOU AT" maxlength = "3">
             <br>
             </div>
         <div id="in2">
             WHEN YA LEAVIN
             <br>
             <input type="date" name="in2" id="in2_day">
-            <input type="submit" name = "submit" onclick ="keydownFunction()">
-            
+            <br>
+        </div>
+        <div id="sub1">
+            <input type="submit" name = "submit" value="LETS GO" id ="clicker" onclick ="keydownFunction()" style="height:50px">
+            </div>
         </div>
 
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script2.js"></script>
+    <div class="list">
+        <table align="center">
+            <tr>
+                 <td><strong>Price</strong> </td>
+                 <td><strong>Name</strong></td>
+                 <td><strong>FAA Code</strong></td>
+                 <td><strong>City</strong></td>
+                 <td><strong>State</strong></td>
+                 <td><strong>Distance</strong></td>
+             </tr>
+             <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+             <td>4</td>
+             <td>5</td>
+             <td>6</td>
+         </tr>
+         <td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+         </table>
+     </div>
+
 
 </body>
 
