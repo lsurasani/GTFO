@@ -64,9 +64,9 @@
                             var b = document.getElementById("in1")
                             document.getElementById("clicker").value = "New search"
                             document.getElementById("in1_txt").value = ""
-                            // setTimeout(a.style.display="none",5000);
-                            // setTimeout(b.style.display="none",5000);
-                            part2();
+
+                            document.getElementById("datatable").style.visibility="visible";
+
 
             
     	
