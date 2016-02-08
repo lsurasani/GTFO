@@ -130,8 +130,6 @@
      });
         // console.log(data.distance);
         // data("fares") = fares;
-        
-
                     // for(int i=0;i<airCode.length;i++) {
                     //     var x = airCode(i);
                     // }
