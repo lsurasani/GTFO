@@ -44,13 +44,14 @@
 
 
             if (inp1.length != 3) {
-                alert("Please enter a valid 3 letter symbol FUCKER BOY");
+                // swal("Enter a valid 3 letter symbol FUCKER BOY");
+                swal({   title: "ARE YOU KIDDING ME",   text: "Enter a valid 3 letter symbol FUCKER BOY",   imageUrl: "images/ree1.jpg" });
                 return;
             } else if (day1 > day2) {
-                alert("Cannot time travel to the past!!")
+                swal("CANT TIME TRAVEL TO THE PAST")
                 return;
             } else if (inp2 == "") {
-                alert("Please enter a date!")
+                swal("Put in a date DUMBASS")
                 return;
             }
                 if (inp1 == "ATL") {
