@@ -1,32 +1,39 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 html {
 	height:100%;
 
 }
 
 .header {
-	font-family: Georgia;
-	color: #B4D8E7;
+	font-family: "Comic Sans MS";
 	font-weight:bold;
-	font-size:90pt;
-	text-align: left;
-	height: 12%;
-	position:relative;
+	font-size:350%;
+	height: 15%;
 	background-image: url("images/bluebkg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+  text-align: center;
+  overflow:auto;
 }
-.header img {
+#logo {
 	max-height: 100px;
-	height:100%;
-	max-width:300px;
-	width:30%;
-	text-align: center;
-	top:20px;
+	height:95%;
+  float:left;
+  top:0;
+  left:0;
 }
 
 body {
 	width:100%;
-
     font-family: "Trebuchet MS";
     color: black;
     height: 100%
@@ -35,17 +42,21 @@ h1 {
 	color:white;
 	font-size: 20px;
 }
-#map{
+#map {
 	position: relative;
 	height: 83%;
 	z-index:-50;
+  width:100%;
 }
 .bottom {
 	text-align: center;
-	background:white;
+	background: white;
 	height: 10%;
-	position: relative;
+	position: absolute;
 	color: black;
+  z-index: 999;
+  width:100%;
+
 }
 #in1 {
 	z-index:50;
