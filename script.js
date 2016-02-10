@@ -74,7 +74,7 @@
 
                             document.getElementById("datatable").style.visibility="visible";
 
-            
+            secondFunction(inp2, inp1);
         
     }
 
@@ -83,16 +83,19 @@
 
 
 
+// Make this a function?
+  function secondFunction(date , place){
+    var date1 = date;
+    var deptAirport = place;
+    var arrAirport = place;
 
-  
+    console.log(arrAirport);
     
-    var date = "2016-02-09";
-    var deptAirport = "ATL"
-    var arrAirport = "DCA"
-    
+    console.log(date1);
     // console.log("Heyoo");
-    // var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-09&departureAirport=ATL&arrivalAirport=GRB&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
-     var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
+    var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date1 + "&departureAirport=" + place + "&arrivalAirport=JFK&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
+    //var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-20&departureAirport=ATL&arrivalAirport=GRB&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
+    // var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
 
       
      $.get(url,function(res) {
@@ -134,7 +137,34 @@
                     //     var x = airCode(i);
                     // }
         //             var airCodetemp = [];
-        function buildTable(data) {
+        buildTable(data);
+//         function buildTable(data) {
+//             for (var i = 1; i < 6; i++) {
+//                 document.getElementById("a" + i).innerHTML = data.airCode[i];
+//                 document.getElementById("b" + i).innerHTML = data.flight[i];
+//                 document.getElementById("c" + i).innerHTML = data.airLocation[i];
+//                 document.getElementById("d" + i).innerHTML = data.depTime[i];
+//                 document.getElementById("e" + i).innerHTML = data.distance[i];
+//                 document.getElementById("f" + i).innerHTML = data.fares[i*6];
+//         //     for (var key in data) {
+//         //       if (data.hasOwnProperty(key)) {
+//         //         airCodetemp.push(data[key]);
+
+//         //       }
+//             // }
+//         // for (i=1;i<5;i++) {
+//             // console.log(airCodetemp[i]);
+//                 // document.getElementById("a" + i).innerHTML = airCodetemp[i[key]];
+
+            
+                   
+
+//     };
+// }
+
+}
+
+function buildTable(data) {
             for (var i = 1; i < 6; i++) {
                 document.getElementById("a" + i).innerHTML = data.airCode[i];
                 document.getElementById("b" + i).innerHTML = data.flight[i];
@@ -157,7 +187,3 @@
 
     };
 }
-
-
-   
-
