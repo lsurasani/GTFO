@@ -53,10 +53,6 @@
                 alert("Please enter a date!")
                 return;
             }
-
-             
-
-
                 if (inp1 == "ATL") {
 
                     x = atlc[0];
@@ -112,6 +108,7 @@
          var airLocation = [];
          var depTime = [];
          var distance = [];
+         var segments = [];
          var data1 = [];   
 
          console.log(res);
@@ -125,6 +122,7 @@
            airLocation.push(res.legs[i].segments[s].arrivalAirportLocation);
            depTime.push(res.legs[i].segments[s].departureTime);
            distance.push(res.legs[i].segments[s].distance);
+           segments.push(s+1);
          }
          data1["fares"] = fares;
           data1["flight"] = flight;
@@ -132,12 +130,8 @@
          data1["airLocation"] = airLocation;
           data1["depTime"] = depTime;
           data1["distance"] = distance;
-          console.log(fares);
-          console.log(flight);
-          console.log(airCode);
-          console.log(airLocation);
-          console.log(depTime);
-          console.log(distance);
+          data1["segments"] = segments;
+
           buildTable(data1);
           // keepData()
      });
@@ -181,8 +175,9 @@ function buildTable(data) {
                 document.getElementById("b" + i).innerHTML = data.flight[i];
                 document.getElementById("c" + i).innerHTML = data.airLocation[i];
                 document.getElementById("d" + i).innerHTML = data.depTime[i];
-                document.getElementById("e" + i).innerHTML = data.distance[i];
-                document.getElementById("f" + i).innerHTML = data.fares[i];
+                document.getElementById("e" + i).innerHTML = data.segments[i];
+                document.getElementById("f" + i).innerHTML = data.distance[i];
+                document.getElementById("g" + i).innerHTML = data.fares[i];
         //     for (var key in data) {
         //       if (data.hasOwnProperty(key)) {
         //         airCodetemp.push(data[key]);
