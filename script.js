@@ -18,6 +18,7 @@
         var jfkc = [-73.7789,40.639];
         inp1 = document.getElementById("in1_txt").value;
         window.inp2 = document.getElementById("in2_day").value;
+
        
         var today = new Date();
         var dd = today.getDate();
@@ -37,8 +38,10 @@
         inp1 = inp1.toString().toUpperCase();
         window.inp2 = inp2.toString();
 
+
         var day1 = new Date(today);
         var day2 = new Date(inp2);
+
 
             if (inp1.length != 3) {
                 alert("Please enter a valid 3 letter symbol FUCKER BOY");
@@ -50,6 +53,10 @@
                 alert("Please enter a date!")
                 return;
             }
+
+             
+
+
                 if (inp1 == "ATL") {
 
                     x = atlc[0];
@@ -75,7 +82,7 @@
                             document.getElementById("datatable").style.visibility="visible";
 
             secondFunction(inp2, inp1);
-        
+       
     }
 
 
@@ -110,12 +117,14 @@
          console.log(res);
          for (i = 0; i < res.offers.length; i++) {
             fares.push(res.offers[i].totalFare);
-           flight.push(res.legs[i].segments[0].airlineCode + 
-                        res.legs[i].segments[0].flightNumber);
-           airCode.push(res.legs[i].segments[0].arrivalAirportCode);
-           airLocation.push(res.legs[i].segments[0].arrivalAirportLocation);
-           depTime.push(res.legs[i].segments[0].departureTime);
-           distance.push(res.legs[i].segments[0].distance);
+            var s = (res.legs[i].segments.length)-1;
+            console.log(s);
+           flight.push(res.legs[i].segments[s].airlineCode + 
+                        res.legs[i].segments[s].flightNumber);
+           airCode.push(res.legs[i].segments[s].arrivalAirportCode);
+           airLocation.push(res.legs[i].segments[s].arrivalAirportLocation);
+           depTime.push(res.legs[i].segments[s].departureTime);
+           distance.push(res.legs[i].segments[s].distance);
          }
          data1["fares"] = fares;
           data1["flight"] = flight;
@@ -130,14 +139,16 @@
           console.log(depTime);
           console.log(distance);
           buildTable(data1);
+          // keepData()
      });
+ // function keepData()
         // console.log(data.distance);
         // data("fares") = fares;
                     // for(int i=0;i<airCode.length;i++) {
                     //     var x = airCode(i);
                     // }
         //             var airCodetemp = [];
-        buildTable(data);
+       // buildTable(data1);
 //         function buildTable(data) {
 //             for (var i = 1; i < 6; i++) {
 //                 document.getElementById("a" + i).innerHTML = data.airCode[i];
@@ -171,7 +182,7 @@ function buildTable(data) {
                 document.getElementById("c" + i).innerHTML = data.airLocation[i];
                 document.getElementById("d" + i).innerHTML = data.depTime[i];
                 document.getElementById("e" + i).innerHTML = data.distance[i];
-                document.getElementById("f" + i).innerHTML = data.fares[i*6];
+                document.getElementById("f" + i).innerHTML = data.fares[i];
         //     for (var key in data) {
         //       if (data.hasOwnProperty(key)) {
         //         airCodetemp.push(data[key]);
