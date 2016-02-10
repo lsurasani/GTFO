@@ -81,21 +81,12 @@
        
     }
 
-
-
-
-
-
-// Make this a function?
   function secondFunction(date , place){
     var date1 = date;
     var deptAirport = place;
     var arrAirport = place;
 
-    console.log(arrAirport);
-    
-    console.log(date1);
-    // console.log("Heyoo");
+
     var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date1 + "&departureAirport=" + place + "&arrivalAirport=JFK&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
     //var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-20&departureAirport=ATL&arrivalAirport=GRB&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
     // var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
@@ -110,27 +101,35 @@
          var distance = [];
          var segments = [];
          var data1 = [];   
-
-         console.log(res);
          for (i = 0; i < res.offers.length; i++) {
+            var totalDistance = 0;
+
             fares.push(res.offers[i].totalFare);
-            var s = (res.legs[i].segments.length)-1;
-            console.log(s);
+            var s = (res.legs[i].segments.length) - 1;
+
+
            flight.push(res.legs[i].segments[s].airlineCode + 
                         res.legs[i].segments[s].flightNumber);
            airCode.push(res.legs[i].segments[s].arrivalAirportCode);
            airLocation.push(res.legs[i].segments[s].arrivalAirportLocation);
            depTime.push(res.legs[i].segments[s].departureTime);
-           distance.push(res.legs[i].segments[s].distance);
-           segments.push(s+1);
+           // distance.push(res.legs[i].segments[s].distance);
+           segments.push(s + 1);
+
+           for (s; s >= 0; s--) {
+            totalDistance += res.legs[i].segments[s].distance;
+           }
+            distance.push(totalDistance + " mi");
          }
-         data1["fares"] = fares;
-          data1["flight"] = flight;
-          data1["airCode"] = airCode;
-         data1["airLocation"] = airLocation;
-          data1["depTime"] = depTime;
-          data1["distance"] = distance;
-          data1["segments"] = segments;
+
+
+        data1["fares"] = fares;
+        data1["flight"] = flight;
+        data1["airCode"] = airCode;
+        data1["airLocation"] = airLocation;
+        data1["depTime"] = depTime;
+        data1["distance"] = distance;
+        data1["segments"] = segments;
 
           buildTable(data1);
           // keepData()
@@ -187,9 +186,5 @@ function buildTable(data) {
         // for (i=1;i<5;i++) {
             // console.log(airCodetemp[i]);
                 // document.getElementById("a" + i).innerHTML = airCodetemp[i[key]];
-
-            
-                   
-
     };
 }
