@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Foo</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+     <link href="style.css" type="text/css" rel="StyleSheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+</heads>
+<body>
+    <div class="header">
+        <img id ="logo" src ="images/logo2.jpg">
+        <!-- WE LIT IN HERE -->
+    </div>
+        <div id='map'> </div>
+        <div id="in1">
+
+            <input type="text" name="in1" id="in1_txt" placeholder="WHERE YOU AT" maxlength = "3" autocomplete="off">
+            <br>
+            </div>
+        <div id="in2">
+            WHEN YA LEAVIN
+            <br>
+            <input type="date" name="in2" id="in2_day">
+            <br>
+        </div>
+        <div id="sub1">
+            <input type="submit" name = "submit" value="LETS GO" id ="clicker" onclick ="keydownFunction()">
+            </div>
+            <table align="center" id="datatable" style="visibility:hidden">
+            <tr>
+                 <td><strong>Airport Code</strong> </td>
+                 <td><strong>Flight Number</strong> </td>
+                 <td><strong>Location</strong></td>
+                 <td><strong>Departure Time</strong> </td>
+                 <td><strong>Connections</strong></td>
+                 <td><strong>Distance</strong></td>
+                 <td><strong>Price</strong></td>
+            </tr>
+            <tr>
+
+                <td id="a1"></td>
+                <td id="b1"></td>
+                <td id="c1"></td>
+                <td id="d1"></td>
+                <td id="e1"></td>
+                <td id="f1"></td>
+                <td id="g1">99999</td>
+</tr> <tr>
+                <td id="a2"></td>
+                <td id="b2"></td>
+                <td id="c2"></td>
+                <td id="d2"></td>
+                <td id="e2"></td>
+                <td id="f2"></td>
+                <td id="g2">99999</td>
+</tr><tr>
+                <td id="a3"></td>
+                <td id="b3"></td>
+                <td id="c3"></td>
+                <td id="d3"></td>
+                <td id="e3"></td>
+                <td id="f3"></td>
+                <td id="g3">99999</td>
+</tr><tr>
+                <td id="a4"></td>
+                <td id="b4"></td>
+                <td id="c4"></td>
+                <td id="d4"></td>
+                <td id="e4"></td>
+                <td id="f4"></td>
+                <td id="g4">99999</td>
+</tr><tr>
+                <td id="a5"></td>
+                <td id="b5"></td>
+                <td id="c5"></td>
+                <td id="d5"></td>
+                <td id="e5"></td>
+                <td id="f5"></td>
+                <td id="g5">99999</td>
+</tr>
+
+         </table>
+        </div>
+    <div id = "checking">
+        <strong>Checking for cheapest flight...</strong>
+    </div>
+    <div class="bottom">
+        <br>
+        <a href="mailto:myass@pornhub.com?Subject=Did you really think we would let you sue us?">Contact us</a>
+        <br>
+        Created by Jason Lukose, Eugene Chu, 2 fuckers
+    </div>
+    
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
+</html>

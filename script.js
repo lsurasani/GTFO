@@ -125,7 +125,8 @@ function keydownFunction() {
 		for (k = 1; k < codes.length; k++) {
 		//     choo[k] = secondFunction(date, airport, codes[k]);
 		//     // console.log(choo[k])
-			secondFunction(departDate, departAirport, codes[k])
+		var counter = k;
+			secondFunction(departDate, departAirport, codes[k], counter)
 		//     // console.log(choo[k])
 
 		//     if (choo.fares[k] < choo.fares[k - 1]) {
@@ -137,7 +138,7 @@ function keydownFunction() {
 	}
 
 
-function secondFunction(date, departure, arrival) {
+function secondFunction(date, departure, arrival, counter) {
 	var date1 = date;
 	var deptAirport = departure;
 	var arrAirport = arrival;
@@ -186,15 +187,17 @@ function secondFunction(date, departure, arrival) {
 			data1["distance"] = distance;
 			data1["segments"] = segments;
 
+			document.getElementById("checking").style.visibility="visible";
 			
 			buildTable(data1);
-		
+			if (counter >= 500)
+			document.getElementById("checking").style.visibility="hidden";
 
-			//console.log(data1);
-			// return data1;
 
 		}
 	});
+
+
 }
 
 function buildTable(data) {
