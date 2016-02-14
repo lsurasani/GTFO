@@ -107,20 +107,33 @@ function keydownFunction() {
     duration: 7000
     });
 
+
+    var a = document.getElementById("in1_txt")
+    var b = document.getElementById("in1")
+    document.getElementById("clicker").value = "New search"
+    document.getElementById("in1_txt").value = ""
+    
+    document.getElementById("datatable").style.visibility="visible";
+
     airportIteration()
-
-    // var a = document.getElementById("in1_txt")
-    // var b = document.getElementById("in1")
-    // document.getElementById("clicker").value = "New search"
-    // document.getElementById("in1_txt").value = ""
-    //
-    // document.getElementById("datatable").style.visibility="visible";
-
     //secondFunction(departDate, departAirport);
 
     function airportIteration() {
-        for (k = 0; k < codes.length; k++) {
-            secondFunction(departDate, departAirport, codes[k]);
+        var choo = [];
+        var chooChoo = [];
+            // choo[0] = secondFunction(departDate, departAirport, codes[0]);
+
+        for (k = 1; k < codes.length; k++) {
+            choo[k] = secondFunction(departDate, departAirport, codes[k]);
+            // console.log(choo[k])
+            // secondFunction(departDate, departAirport, codes[k])
+            // console.log(choo[k])
+
+            // if (choo.fares[k] < choo.fares[k - 1]) {
+            //     chooChoo[k - 1] = choo[k];
+            // }
+
+            // buildTable(choo);
         }
     }
 }
@@ -129,14 +142,12 @@ function secondFunction(date, departure, arrival) {
     var date1 = date;
     var deptAirport = departure;
     var arrAirport = arrival;
-    //console.log(arrAirport);
 
     var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date1 + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
     //var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-20&departureAirport=ATL&arrivalAirport=GRB&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
     // var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
 
     $.get(url,function(res) {
-        console.log(res);
         var fares = [];
         var flight = [];
         var airCode = [];
@@ -145,9 +156,12 @@ function secondFunction(date, departure, arrival) {
         var distance = [];
         var segments = [];
         var data1 = [];
+        if (res.offers == undefined) {
+                return null;
+            } else {
         for (i = 0; i < res.offers.length; i++) {
             var totalDistance = 0;
-
+            
             fares.push(res.offers[i].totalFare);
             var segmentNum = (res.legs[i].segments.length) - 1;
 
@@ -164,7 +178,6 @@ function secondFunction(date, departure, arrival) {
 
             distance.push(totalDistance + " mi");
         }
-
         data1["fares"] = fares;
         data1["flight"] = flight;
         data1["airCode"] = airCode;
@@ -173,8 +186,12 @@ function secondFunction(date, departure, arrival) {
         data1["distance"] = distance;
         data1["segments"] = segments;
 
-          //buildTable(data1);
+          // buildTable(data1);
+          
+          return data1;
+      }
     });
+
 }
 
 function buildTable(data) {
