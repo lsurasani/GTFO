@@ -200,107 +200,17 @@ function secondFunction(date, departure, arrival) {
 function buildTable(data) {
 	// if (data.fares[i] < document.getElementById("g" + i).innerHTML) {
 
-		// for (var i = 1; i < 6; i++) {
-			var i = 1;
-			var j = i + 1;
-			var k = j + 1;
-			var l = k + 1;
-			var m = l + 1;
-			var n = m + 1;
+		for (var i = 1; i < 6; i++) {
 
+			if (Math.abs(data.fares[i]) < document.getElementById("g" + i).innerHTML) {
+				document.getElementById("a" + i).innerHTML = data.airCode[i];
+				document.getElementById("b" + i).innerHTML = data.flight[i];
+				document.getElementById("c" + i).innerHTML = data.airLocation[i];
+				document.getElementById("d" + i).innerHTML = data.depTime[i];
+				document.getElementById("e" + i).innerHTML = data.segments[i];
+				document.getElementById("f" + i).innerHTML = data.distance[i];
+				document.getElementById("g" + i).innerHTML = data.fares[i];
 			
-
-			if (data.fares[0] < document.getElementById("g" + i).innerHTML) {
-
-			document.getElementById("a" + i).innerHTML = data.airCode[i];
-			document.getElementById("b" + i).innerHTML = data.flight[i];
-			document.getElementById("c" + i).innerHTML = data.airLocation[i];
-			document.getElementById("d" + i).innerHTML = data.depTime[i];
-			document.getElementById("e" + i).innerHTML = data.segments[i];
-			document.getElementById("f" + i).innerHTML = data.distance[i];
-			document.getElementById("g" + i).innerHTML = data.fares[i];
-
-			var i1 = document.getElementById("a" + i).innerHTML; 
-			var i2 = document.getElementById("b" + i).innerHTML;
-			var i3 = document.getElementById("c" + i).innerHTML;
-			var i4 = document.getElementById("d" + i).innerHTML;
-			var i5 = document.getElementById("e" + i).innerHTML; 
-			var i6 = document.getElementById("f" + i).innerHTML; 
-			var i7 = document.getElementById("g" + i).innerHTML; 
-
-			var j1 = i1; 
-			var j2 = i2;
-			var j3 = i3;
-			var j4 = i4;
-			var j5 = i5;
-			var j6 = i6; 
-			var j7 = i7;
-
-			var k1 =j1; 
-			var k2 =j2;
-			var k3 =j3;
-			var k4 =j4;
-			var k5 =j5; 
-			var k6 =j6; 
-			var k7 =j7;
-
-			var l1 =k1; 
-			var l2 =k2;
-			var l3 =k3;
-			var l4 =k4;
-			var l5 =k5; 
-			var l6 =k6; 
-			var l7 =k7;
-
-			var m1 =l1; 
-			var m2 =l2;
-			var m3 =l3;
-			var m4 =l4;
-			var m5 =l5; 
-			var m6 =l6; 
-			var m7 =l7;
-
-			// document.getElementById("a" + i).innerHTML = data.airCode[i];
-			// document.getElementById("b" + i).innerHTML = data.flight[i];
-			// document.getElementById("c" + i).innerHTML = data.airLocation[i];
-			// document.getElementById("d" + i).innerHTML = data.depTime[i];
-			// document.getElementById("e" + i).innerHTML = data.segments[i];
-			// document.getElementById("f" + i).innerHTML = data.distance[i];
-			// document.getElementById("g" + i).innerHTML = data.fares[i];
-
-		
-			document.getElementById("a" + j).innerHTML = j1;
-			document.getElementById("b" + j).innerHTML = j2;
-			document.getElementById("c" + j).innerHTML = j3;
-			document.getElementById("d" + j).innerHTML = j4;
-			document.getElementById("e" + j).innerHTML = j5;
-			document.getElementById("f" + j).innerHTML = j6;
-			document.getElementById("g" + j).innerHTML = j7;
-
-			document.getElementById("a" + k).innerHTML = k1;
-			document.getElementById("b" + k).innerHTML = k2;
-			document.getElementById("c" + k).innerHTML = k3;
-			document.getElementById("d" + k).innerHTML = k4;
-			document.getElementById("e" + k).innerHTML = k5;
-			document.getElementById("f" + k).innerHTML = k6;
-			document.getElementById("g" + k).innerHTML = k7;
-
-			document.getElementById("a" + l).innerHTML = l1;
-			document.getElementById("b" + l).innerHTML = l2;
-			document.getElementById("c" + l).innerHTML = l3;
-			document.getElementById("d" + l).innerHTML = l4;
-			document.getElementById("e" + l).innerHTML = l5;
-			document.getElementById("f" + l).innerHTML = l6;
-			document.getElementById("g" + l).innerHTML = l7;
-
-			document.getElementById("a" + m).innerHTML = m1;
-			document.getElementById("b" + m).innerHTML = m2;
-			document.getElementById("c" + m).innerHTML = m3;
-			document.getElementById("d" + m).innerHTML = m4;
-			document.getElementById("e" + m).innerHTML = m5;
-			document.getElementById("f" + m).innerHTML = m6;
-			document.getElementById("g" + m).innerHTML = m7;
-			
-		 // }
+		 }
 	}
 }
