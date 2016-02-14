@@ -8,50 +8,46 @@ zoom: 0,// starting zoom
 interactive:false
 });
 
-var codes = ["ABR","ABI","CAK","ALS","ABY","ALB","ABQ","AEX","ABE", "AIA",
-"APN","AOO","AMA","ANC","ATW","AVL","ASE","AHN", "ATL","ACY","AGS","AUG",
-"AUS","BFL","BWI","BGR","BHB", "BRW","BTR","BPT","BKW","BED","BLI","BJI",
-"BET","BTT", "BIL","BGM","BHM","BIS","BMI","BMG","BLF","BOI","BOS", "BZN",
-"BKX","BRO","BQK","BUF","BUR","BRL","BBF","BTV", "BTM","CGI","CLD","CNM",
-"CPR","CID","CMI","CHS","CRW", "CLT","CHO","CHA","CYS","CHI","MDW","CHI",
-"ORD","CIC", "CVG","CKB","CLE","CVN","COD","CLL","COS","COU","CAE", "CSG",
-"CLU","GTR","OLU","CMH","CDV","CRP","DAL","DFW", "DAY","DAB","DEC","DEN",
-"DSM","DTW","DTT","DVL","DIK", "DLG","DDC","DHN","DUJ","DBQ","DLH","DRO",
-"DUT","EAU", "EEK","IPL","ELD","ELP","EKO","ELM","WDG","ERI","ESC", "EUG",
-"ACV","EVV","FAI","FAR","FMN","XNA","FAY","FLG", "FNT","FLO","FOD","FLL",
-"TBN","RSW","FSM","VPS","FWA", "FYU","FAT","GNV","GCK","GCC","GDV","GFK",
-"GRI","GJT", "GRR","GBD","GTF","GRB","LWB","GSO","GLH","PGV","GSP", "GPT",
-"GUC","HGR","HNM","CMX","HRL","MDT","HRO","BDL", "HVR","HYS","HLN","HIB",
-"HHH","HOB","HOM","HNL", "MKK","EFD","HOU","IAH","EFD","HTS","HSV",
-"HON","HYA", "IDA","IND","INL","IYK","IMT","IWD","ISP","ITH","JAC", "JAN",
-"MKL","JAX","OAJ","JMS","JHW","JST","JPR","JLN", "JNU","OGG","AZO","LUP",
-"FCA","MCI","JHM","EAR","ENA", "KTM","EYW","GRK","AKN","IGM","IRK","LMT",
-"TYS","ADQ", "LSE","LFT","LCH","Hll","LNY","LNS","LAN","LAR","LRD", "LRU",
-"LAS","LBE","PIB","LAW","LAB","LWS","LEW","LWT", "LEX","LBL","LIH","LNK",
-"LIT","LGB","GGG","QLA","SDF", "LBB","LYH","MCN","MSN","MHT","MHK","MBL",
-"MWA","MQT", "MVY","MCW","MSS","MFE","MCK","MFR","MLB","MEM","MEI", "MIA",
-"MAF","MLS","MKE","MSP","MOT","MSO","MOB","MOD", "MLI","MLU","MRY","MGM",
-"MTJ","MGW","MWH","MSL","MKG", "MRY","ACK","ABF","BNA","EWN","HVN","MSY",
-"LGA","JFK", "NYC","EWR","SWF","PHF","OME","ORF","OTH","LBF","OAK", "OGS",
-"OKC","OMA","ONT","SNA","MCO","OSH","OWB","OXR", "PAH","PGA","PSP","PFN",
-"PKB","PSC","PLN","PDT","PNS", "PIA","PHL","PHX","PIR","SOP","PIT","PIH",
-"PNC","PWM", "PDX","PSM","PRC","PQI","PVD","PVC","PUB","PUW","UIN", "RDU",
-"RAP","RDD","RDM","RNO","RHI","RIC","RIW","ROA", "RST","ROC","RKS","RFD",
-"RKD","ROW","RUT","SMF","MBS", "SLN","SPY","SLC","SJT","SAT","SAN","QSF",
-"SFO","SJC", "SBP","SDP","SBA","SAF","SMX","STS","SLK","SRQ","CIU", "SAV",
-"BFF","SEA","SHD","SHR","SHV","SDY","SVC","SUX", "FSD","SIT","SGY","SBN",
-"GEG","SPI","CEF","SGF","VSF", "STC","SGU","STL","PIE","SCE","SBS","SUN",
-"SRY","TLH", "TPA","TAX","TXK","TVF","OOK","TOL","TOP","TVC","TTN", "TUS",
-"TUL","TUP","TWF","TYR","UNK","EGE","VDZ","VLD", "VCT","VIS","ACT","ALW",
-"DCA","WAS","IAD","ALO","ART", "ATY","CWA","EAT","PBI","WYS","HPN","SPS",
-"ICT","AVP","IPT","ISN","ILG","ILM","OLF","WRL","WRG","YKM","YAK","YUM",
-"YXX","YAA","YEK","YBG","YYC","YBL","YGR","YCG", "YYG","YMT","YYQ","YXC",
-"YDF","YHD","YEG","YEO","YMM", "YYE","YXJ","YSM","YFC","YQX","YGP","YQU",
-"YHZ","YHM", "YFB","YKA","YLW","YQK","YGK","YQL","YXU","YXH","YQM", "YYY",
-"YMQ","YUL","YCD","YYB","YOW","YYF","YZT","YPW", "YPR","YQB","YQZ","YRT",
-"YRL","YQR","YRJ","YUY","YSJ", "YZP","YZR","YXE","YAM","YZV","YXL","YYD",
-"YYT","YSB", "YQY","YXT","YTH","YQT","YTS","YYZ","YTO","YTZ","YVO", "YVR",
-"YYJ","YWK","YXY","YWL","YQG","YWG","YZF","LAX"];
+var codes = ["ABE","ABF","ABI","ABQ","ABR","ABY","ACK","ACT","ACV","ACY","ADQ","AEX","AGS",
+"AHN","AIA","AKN","ALB","ALO","ALS","ALW","AMA","ANC","AOO","APN","ART","ASE",
+"ATL","ATW","ATY","AUG","AUS","AVL","AVP","AZO","BBF","BDL","BED","BET","BFF",
+"BFL","BGM","BGR","BHB","BHM","BIL","BIS","BJI","BKW","BKX","BLF","BLI","BMG",
+"BMI","BNA","BOI","BOS","BPT","BQK","BRL","BRO","BRW","BTM","BTR","BTT","BTV",
+"BUF","BUR","BWI","BZN","CAE","CAK","CDV","CEF","CGI","CHA","CHI","CHI","CHO",
+"CHS","CIC","CID","CIU","CKB","CLD","CLE","CLL","CLT","CLU","CMH","CMI","CMX",
+"CNM","COD","COS","COU","CPR","CRP","CRW","CSG","CVG","CVN","CWA","CYS","DAB",
+"DAL","DAY","DBQ","DCA","DDC","DEC","DEN","DFW","DHN","DIK","DLG","DLH","DRO",
+"DSM","DTT","DTW","DUJ","DUT","DVL","EAR","EAT","EAU","EEK","EFD","EFD","EGE",
+"EKO","ELD","ELM","ELP","ENA","ERI","ESC","EUG","EVV","EWN","EWR","EYW","FAI",
+"FAR","FAT","FAY","FCA","FLG","FLL","FLO","FMN","FNT","FOD","FSD","FSM","FWA",
+"FYU","GBD","GCC","GCK","GDV","GEG","GFK","GGG","GJT","GLH","GNV","GPT","GRB",
+"GRI","GRK","GRR","GSO","GSP","GTF","GTR","GUC","HGR","HHH","HIB","HLN","HNL",
+"HNM","HOB","HOM","HON","HOU","HPN","HRL","HRO","HSV","HTS","HVN","HVR","HYA",
+"HYS","Hll","IAD","IAH","ICT","IDA","IGM","ILG","ILM","IMT","IND","INL","IPL",
+"IPT","IRK","ISN","ISP","ITH","IWD","IYK","JAC","JAN","JAX","JFK","JHM","JHW",
+"JLN","JMS","JNU","JPR","JST","KTM","LAB","LAN","LAR","LAS","LAW","LAX","LBB",
+"LBE","LBF","LBL","LCH","LEW","LEX","LFT","LGA","LGB","LIH","LIT","LMT","LNK",
+"LNS","LNY","LRD","LRU","LSE","LUP","LWB","LWS","LWT","LYH","MAF","MBL","MBS",
+"MCI","MCK","MCN","MCO","MCW","MDT","MDW","MEI","MEM","MFE","MFR","MGM","MGW",
+"MHK","MHT","MIA","MKE","MKG","MKK","MKL","MLB","MLI","MLS","MLU","MOB","MOD",
+"MOT","MQT","MRY","MRY","MSL","MSN","MSO","MSP","MSS","MSY","MTJ","MVY","MWA",
+"MWH","NYC","OAJ","OAK","OGG","OGS","OKC","OLF","OLU","OMA","OME","ONT","OOK",
+"ORD","ORF","OSH","OTH","OWB","OXR","PAH","PBI","PDT","PDX","PFN","PGA","PGV",
+"PHF","PHL","PHX","PIA","PIB","PIE","PIH","PIR","PIT","PKB","PLN","PNC","PNS",
+"PQI","PRC","PSC","PSM","PSP","PUB","PUW","PVC","PVD","PWM","QLA","QSF","RAP",
+"RDD","RDM","RDU","RFD","RHI","RIC","RIW","RKD","RKS","RNO","ROA","ROC","ROW",
+"RST","RSW","RUT","SAF","SAN","SAT","SAV","SBA","SBN","SBP","SBS","SCE","SDF",
+"SDP","SDY","SEA","SFO","SGF","SGU","SGY","SHD","SHR","SHV","SIT","SJC","SJT",
+"SLC","SLK","SLN","SMF","SMX","SNA","SOP","SPI","SPS","SPY","SRQ","SRY","STC",
+"STL","STS","SUN","SUX","SVC","SWF","TAX","TBN","TLH","TOL","TOP","TPA","TTN",
+"TUL","TUP","TUS","TVC","TVF","TWF","TXK","TYR","TYS","UIN","UNK","VCT","VDZ",
+"VIS","VLD","VPS","VSF","WAS","WDG","WRG","WRL","WYS","XNA","YAA","YAK","YAM",
+"YBG","YBL","YCD","YCG","YDF","YEG","YEK","YEO","YFB","YFC","YGK","YGP","YGR",
+"YHD","YHM","YHZ","YKA","YKM","YLW","YMM","YMQ","YMT","YOW","YPR","YPW","YQB",
+"YQG","YQK","YQL","YQM","YQR","YQT","YQU","YQX","YQY","YQZ","YRJ","YRL","YRT",
+"YSB","YSJ","YSM","YTH","YTO","YTS","YTZ","YUL","YUM","YUY","YVO","YVR","YWG",
+"YWK","YWL","YXC","YXE","YXH","YXJ","YXL","YXT","YXU","YXX","YXY","YYB","YYC",
+"YYD","YYE","YYF","YYG","YYJ","YYQ","YYT","YYY","YYZ","YZF","YZP","YZR","YZT","YZV"];
 
 var departAirport;
 var departDate;
@@ -115,28 +111,30 @@ function keydownFunction() {
     
     document.getElementById("datatable").style.visibility="visible";
 
-    airportIteration()
+    airportIteration(departDate,departAirport)
     //secondFunction(departDate, departAirport);
-
-    function airportIteration() {
+}
+    function airportIteration(date,airport) {
         var choo = [];
         var chooChoo = [];
-            // choo[0] = secondFunction(departDate, departAirport, codes[0]);
+            choo[0] = secondFunction(departDate, departAirport, codes[0]);
 
-        for (k = 1; k < codes.length; k++) {
-            choo[k] = secondFunction(departDate, departAirport, codes[k]);
-            // console.log(choo[k])
-            // secondFunction(departDate, departAirport, codes[k])
-            // console.log(choo[k])
+           setTimeOut(function(){console.log(choo[0])},5000);
 
-            // if (choo.fares[k] < choo.fares[k - 1]) {
-            //     chooChoo[k - 1] = choo[k];
-            // }
+        // for (k = 1; k < codes.length; k++) {
+        //     choo[k] = secondFunction(date, airport, codes[k]);
+        //     // console.log(choo[k])
+        //     // secondFunction(departDate, departAirport, codes[k])
+        //     // console.log(choo[k])
 
-            // buildTable(choo);
-        }
+        //     if (choo.fares[k] < choo.fares[k - 1]) {
+        //         chooChoo[k - 1] = choo[k];
+        //     }
+
+        //     buildTable(choo);
+        // }
     }
-}
+
 
 function secondFunction(date, departure, arrival) {
     var date1 = date;
@@ -144,9 +142,7 @@ function secondFunction(date, departure, arrival) {
     var arrAirport = arrival;
 
     var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date1 + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
-    //var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-20&departureAirport=ATL&arrivalAirport=GRB&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
-    // var url = "http://terminal2.expedia.com:80/x/mflights/search?departureDate=" + date + "&departureAirport=" + deptAirport + "&arrivalAirport=" + arrAirport + "&prettyPrint=false&infantSeatingInLap=false&lccAndMerchantFareCheckoutAllowed=false&apikey=Sp40QZHEdigBSkXQjW5lKayhVUjhGirU";
-
+   
     $.get(url,function(res) {
         var fares = [];
         var flight = [];
@@ -157,41 +153,45 @@ function secondFunction(date, departure, arrival) {
         var segments = [];
         var data1 = [];
         if (res.offers == undefined) {
+                //console.log("null");
+                counter++;
+                console.log("n " + counter);
                 return null;
-            } else {
-        for (i = 0; i < res.offers.length; i++) {
-            var totalDistance = 0;
-            
-            fares.push(res.offers[i].totalFare);
-            var segmentNum = (res.legs[i].segments.length) - 1;
+        } else {
+            for (i = 0; i < res.offers.length; i++) {
+                var totalDistance = 0;
+                
+                fares.push(res.offers[i].totalFare);
+                var segmentNum = (res.legs[i].segments.length) - 1;
 
-            flight.push(res.legs[i].segments[segmentNum].airlineCode + res.legs[i].segments[segmentNum].flightNumber);
-            airCode.push(res.legs[i].segments[segmentNum].arrivalAirportCode);
-            airLocation.push(res.legs[i].segments[segmentNum].arrivalAirportLocation);
-            depTime.push(res.legs[i].segments[segmentNum].departureTime);
-            // distance.push(res.legs[i].segments[s].distance);
-            segments.push(segmentNum + 1);
+                flight.push(res.legs[i].segments[segmentNum].airlineCode + res.legs[i].segments[segmentNum].flightNumber);
+                airCode.push(res.legs[i].segments[segmentNum].arrivalAirportCode);
+                airLocation.push(res.legs[i].segments[segmentNum].arrivalAirportLocation);
+                depTime.push(res.legs[i].segments[segmentNum].departureTime);
+                // distance.push(res.legs[i].segments[s].distance);
+                segments.push(segmentNum + 1);
 
-            for (segmentNum; segmentNum >= 0; segmentNum--) {
-                totalDistance += res.legs[i].segments[segmentNum].distance;
+                for (segmentNum; segmentNum >= 0; segmentNum--) {
+                    totalDistance += res.legs[i].segments[segmentNum].distance;
+                }
+
+                distance.push(totalDistance + " mi");
             }
+            data1["fares"] = fares;
+            data1["flight"] = flight;
+            data1["airCode"] = airCode;
+            data1["airLocation"] = airLocation;
+            data1["depTime"] = depTime;
+            data1["distance"] = distance;
+            data1["segments"] = segments;
 
-            distance.push(totalDistance + " mi");
+            // buildTable(data1);
+
+            //console.log(data1);
+            return data1;
+
         }
-        data1["fares"] = fares;
-        data1["flight"] = flight;
-        data1["airCode"] = airCode;
-        data1["airLocation"] = airLocation;
-        data1["depTime"] = depTime;
-        data1["distance"] = distance;
-        data1["segments"] = segments;
-
-          // buildTable(data1);
-          
-          return data1;
-      }
     });
-
 }
 
 function buildTable(data) {
@@ -204,5 +204,5 @@ function buildTable(data) {
         document.getElementById("f" + i).innerHTML = data.distance[i];
         document.getElementById("g" + i).innerHTML = data.fares[i];
 
-    } // took out semicolon
+    }
 }
